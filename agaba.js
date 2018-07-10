@@ -1,3 +1,4 @@
+'use strict'
 /**
  * Wrap around console.log to show a json formatted log value
  * @param val
