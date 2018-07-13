@@ -46,5 +46,13 @@
            );
        };
 
+       Agaba.objKeys = function(_array) {
+         return Object.keys(_array);
+       }
+
+       Agaba.objFirst = function (_array) {
+         return _array[Agaba.objKeys(_array)[0]];
+       }
+
        return Agaba;
    })();
