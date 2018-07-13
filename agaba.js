@@ -54,5 +54,18 @@
          return _array[Agaba.objKeys(_array)[0]];
        }
 
+       // Escaping html tags ref: https://stackoverflow.com/a/9251169/5704410
+      Agaba.escapeHTML = function (html) {
+        var escape = document.createElement('textarea');
+        escape.textContent = html;
+        return escape.innerHTML;
+      }
+
+      Agaba.unescapeHTML = function (html) {
+        var escape = document.createElement('textarea');
+        escape.innerHTML = html;
+        return escape.textContent;
+      }
+
        return Agaba;
    })();
